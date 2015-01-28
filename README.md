@@ -1,8 +1,8 @@
 # PebbleJS Keyboard
 
-PebbleJS keyboard is a simple try to get a working keyboard in the watch. 
+PebbleJS keyboard is a simple attempt to get a working keyboard in the watch. 
 
-The idea is to provide a simple and fast keyboard for quick replies, sing ups or validations (code validation e.g).
+The idea is to provide a simple and fast input method for quick replies, sing ups or validations (code validation e.g).
 
 ## Getting started
 
@@ -42,8 +42,8 @@ You can also hide the keyboard by calling `hide()`.
 
 For the user, I tried to make the keyboard reeeeally simple using the 3 keys on the right like this:
 	
-	- Switch from letters to numbers or symbols by long-pressing the down button
-	- Erase a character by long-pressing the up button
-	- Change the character with up/down
-	- Select a character with the select button (middle)
-	- Submit the input by long-pressing the select button (middle)
+	* Switch from letters to numbers or symbols by long-pressing the down button
+	* Erase a character by long-pressing the up button
+	* Change the character with up/down
+	* Select a character with the select button (middle)
+	* Submit the input by long-pressing the select button (middle)
