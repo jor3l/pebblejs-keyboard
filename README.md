@@ -11,7 +11,7 @@ The easiest way to use the keyboard is in [CloudPebble](https://cloudpebble.net)
 In your main.js or the file that needs the keyboard, do a simple: 
 
 ````js
-var Keyboard = require('keyboard');
+var Keyboard = require('pebblejs-keyboard'); // Asuming the file is named pebblejs-keyboard.js
 ```
 
 The variable Keyboard will have the module, you can create now as many keyboard instances you like, I recommend using only one to use less memory and keep it as simple as possible.
@@ -35,3 +35,15 @@ Now you can display the keyboard to the user at any time:
 ````js
 myKeyboard.show();
 ```
+
+You can also hide the keyboard by calling 'hide()'.
+
+## Using the Keyboard
+
+For the user, I tried to make the keyboard reeeeally simple using the 3 keys on the right like this:
+	
+	- Switch from letters to numbers or symbols by long-pressing the down button
+	- Erase a character by long-pressing the up button
+	- Change the character with up/down
+	- Select a character with the select button (middle)
+	- Submit the input by long-pressing the select button (middle)
