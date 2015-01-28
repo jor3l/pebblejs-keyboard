@@ -16,7 +16,7 @@ var Keyboard = require('pebblejs-keyboard'); // Asuming the file is named pebble
 
 The variable Keyboard will have the module, you can create now as many keyboard instances you like, I recommend using only one to use less memory and keep it as simple as possible.
 
-To initialize your keyboard, simply call 'new Keyboard(WindowObject)', passing a Window Object to the Keyboard module, this window is where the keyboard will be displayed, you can set a new window later by calling 'Keyboard.window(WindowObject)'.
+To initialize your keyboard, simply call `new Keyboard(WindowObject)`, passing a Window Object to the Keyboard module, this window is where the keyboard will be displayed, you can set a new window later by calling `Keyboard.window(WindowObject)`.
 
 ````js
 var myKeyboard = new Keyboard(window);
@@ -36,7 +36,7 @@ Now you can display the keyboard to the user at any time:
 myKeyboard.show();
 ```
 
-You can also hide the keyboard by calling 'hide()'.
+You can also hide the keyboard by calling `hide()`.
 
 ## Using the Keyboard
 
