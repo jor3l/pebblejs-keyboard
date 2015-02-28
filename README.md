@@ -40,6 +40,8 @@ You can also hide the keyboard by calling `hide()`.
 
 ## Using the Keyboard
 
+![usage](usage.gif)
+
 For the user, I tried to make the keyboard reeeeally simple using the 3 keys on the right like this:
 	
 	* Switch from letters to numbers or symbols by long-pressing the down button
