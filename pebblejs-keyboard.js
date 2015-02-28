@@ -12,7 +12,8 @@
 var UI = require('ui');
 var Vector2 = require('vector2');
 var availableCharacters = {
-    letters: 'abcdefghijklmnopqrstuvwxyz',
+    lowerCase: 'abcdefghijklmnopqrstuvwxyz',
+    upperCase: 'ABCDEFHIJKLMNOPQRSTUVWXYZ',
     numbers: '0123456789',
     symbols: ' .,:-!?@#'
 };
@@ -32,7 +33,7 @@ var bar_visible = new Vector2(0, bar_y);
 
 var Keyboard = function(w) {
   this.winObj = w || false;
-  this.activeMode = 'letters';
+  this.activeMode = 'lowerCase';
   this.activeChar = 0;
   this.phrase = '';
   this.callbacks = {};
@@ -48,7 +49,7 @@ var Keyboard = function(w) {
   });
   
   this.charElement = new UI.Text({
-    size: new Vector2(letter_box, letter_box),
+    size: new Vector2(letter_box + 1, letter_box),
     position: new Vector2(4, letter_y),
     text: 'a',
     color: 'black',
@@ -134,18 +135,20 @@ Keyboard.prototype.deleteLast = function() {
 Keyboard.prototype.switchMode = function() {
   this.activeChar = 0;
   
-  if(this.activeMode == 'letters') {
+  if(this.activeMode == 'lowerCase') {
+    this.activeMode = 'upperCase';
+  } else if(this.activeMode == 'upperCase') {
     this.activeMode = 'numbers';
   } else if(this.activeMode == 'numbers') {
     this.activeMode = 'symbols';
-  } else { this.activeMode = 'letters'; }
+  } else { this.activeMode = 'lowerCase'; }
   
   this.showChar();
 };
 
 Keyboard.prototype.hide = function() {
   this.activeChar = 0;
-  this.activeMode = 'letters';
+  this.activeMode = 'lowerCase';
   this.charElement.text('');
   this.phrase = '';
   this.phraseElement.text('');
