@@ -10,7 +10,7 @@ The easiest way to use the keyboard is in [CloudPebble](https://cloudpebble.net)
 
 In your main.js or the file that needs the keyboard, do a simple: 
 
-````js
+```js
 var Keyboard = require('pebblejs-keyboard'); // Asuming the file is named pebblejs-keyboard.js
 ```
 
@@ -18,13 +18,13 @@ The variable Keyboard will have the module, you can create now as many keyboard 
 
 To initialize your keyboard, simply call `new Keyboard(WindowObject)`, passing a Window Object set to `fullscreen: true` to the Keyboard module, this window is where the keyboard will be displayed, you can set a new window later by calling `Keyboard.window(WindowObject)`.
 
-````js
+```js
 var myKeyboard = new Keyboard(window);
 ```
 
 After creating the keyboard, hook a *text* event to receive the user input:
 
-````js
+```js
 myKeyboard.on('text', function(input) {
 	console.log('user typed: ' + input)
 });
@@ -32,7 +32,7 @@ myKeyboard.on('text', function(input) {
 
 Now you can display the keyboard to the user at any time:
 
-````js
+```js
 myKeyboard.show();
 ```
 
